@@ -3,6 +3,6 @@
 @main("Play with Scala.js") {
   @scalajs.html.scripts("web-client",
     routes.Assets.versioned(_).toString,
-    name => getClass.getResource(s"/public/$name") != null)
-
+    name => getClass.getResource("/public/" + name) != null
+  )
 }
